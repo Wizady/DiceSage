@@ -58,7 +58,7 @@ button:hover {
 }
 #websiteLogo {
 
-    width: 60%;  /* Adjust as needed, maybe you'd prefer a max-width */
+    width: 70%;  /* Adjust as needed, maybe you'd prefer a max-width */
     height: auto; /* Keeps the image aspect ratio */
     display: center;
     margin: 20px 0; /* Adds some space above and below the logo */
