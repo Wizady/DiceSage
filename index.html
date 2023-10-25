@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice Sage: Master Your Rolls</title>
+    <link rel="icon" href="favicon.ico" type="images/favicon.ico">
+    <link rel="icon" sizes="192x192" href="images/android-chrome-192x192.png">
+    <link rel="icon" sizes="512x512" href="images/android-chrome-512x512.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Almendra+SC&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="hamburger-menu">
+    <div class="hamburger-icon" onclick="toggleMenu()">
+        &#9776;
+    </div>
+    <div class="menu-items" id="menuItems">
+        <a href="index.html">Home</a>
+        <a href="dicepool.html">Dicepool</a>
+    </div>
+</div>
+
+        <div class="container">
+          <img src="images/dice_sage_header.png" alt="Dice Sage: Master Your Rolls" id="websiteLogo">
+            <p>Enter the number of dice you want to roll:</p>
+            <input type="number" id="diceCount" placeholder="Number of dice"
+    min="1">
+            <p>Select the number of sides for the dice:</p>
+    <select id="diceSides">
+        <option value="4">4</option>
+        <option value="6" selected>6</option>
+        <option value="8">8</option>
+        <option value="10">10</option>
+        <option value="12">12</option>
+        <option value="20">20</option>
+        <option value="100">100</option>
+    </select>
+    <br><br>
+    <button id="rollWithSidesButton">Roll with Selected Sides</button>
+    <div class="log">
+        <h2>Roll Log</h2>
+        <ul id="rollLog"></ul>
+    </div>
+        </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

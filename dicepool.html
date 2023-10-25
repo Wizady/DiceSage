@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice Pool</title>
+    <link rel="icon" href="favicon.ico" type="images/favicon.ico">
+    <link rel="icon" sizes="192x192" href="images/android-chrome-192x192.png">
+    <link rel="icon" sizes="512x512" href="images/android-chrome-512x512.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Almendra+SC&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Dice Pool</h1>
+        <p>Add dice to your pool:</p>
+        <button onclick="addDiceToPool(4)">Add D4</button>
+        <button onclick="addDiceToPool(6)">Add D6</button>
+        <button onclick="addDiceToPool(8)">Add D8</button>
+        <button onclick="addDiceToPool(10)">Add D10</button>
+        <button onclick="addDiceToPool(12)">Add D12</button>
+        <button onclick="addDiceToPool(20)">Add D20</button>
+        <button onclick="addDiceToPool(100)">Add D100</button>
+        <br>
+        <p>Remove dice from your pool:</p>
+        <button onclick="removeDiceFromPool(4)">Remove D4</button>
+        <button onclick="removeDiceFromPool(6)">Remove D6</button>
+        <button onclick="removeDiceFromPool(8)">Remove D8</button>
+        <button onclick="removeDiceFromPool(10)">Remove D10</button>
+        <button onclick="removeDiceFromPool(12)">Remove D12</button>
+        <button onclick="removeDiceFromPool(20)">Remove D20</button>
+        <button onclick="removeDiceFromPool(100)">Remove D100</button>
+
+        <h2>Your Dice Pool:</h2>
+        <ul id="dicePoolList"></ul>
+
+        <div class="button-group">
+          <button onclick="calculateAverageSum()">Calculate Average Sum</button>
+      <p id="averageSum">Average Sum: N/A</p>
+      <button onclick="simulateRollingDice()">Simulate Rolling Dice</button>
+  <p id="simulationResult">Simulation Result: N/A</p>
+</div>
+<br>
+    <button onclick="resetDicePool()">Reset Dice Pool</button>
+        <div id="histogramContainer"></div>
+    </div>
+
+
+    <script src="dicepool.js"></script>
+</body>
+</html>
