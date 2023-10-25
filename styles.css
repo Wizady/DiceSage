@@ -1,3 +1,4 @@
+/* Global Styles */
 body {
     font-family: 'Almendra SC', serif;
     background-color: rgb(240, 237, 227);
@@ -9,20 +10,23 @@ body {
     height: 100vh;
 }
 
+/* Main Container Styling */
 .container {
-    border: none;          /* Removes any border */
-    background: transparent; /* Makes the background transparent */
     padding: 20px;
-    border-radius: 8px;
     width: 700px;
+    border: none;  /* Removes any border */
+    border-radius: 8px;
+    background: transparent;  /* Makes the background transparent */
     text-align: center;
 }
 
+/* Headings */
 h1 {
     color: #333;
     margin-top: 0;
 }
 
+/* Input Fields */
 input {
     width: 100%;
     padding: 10px;
@@ -32,6 +36,7 @@ input {
     font-family: 'MedievalSharp', cursive;
 }
 
+/* Buttons */
 button {
     background-color: #007BFF;
     color: #fff;
@@ -42,63 +47,60 @@ button {
     transition: background-color 0.3s;
     font-family: 'Almendra SC', serif;
 }
-
 button:hover {
     background-color: #0056b3;
-    font-family: 'Almendra SC', serif;
 }
 
+/* Dice Count Input Styling */
 #diceCount {
     width: 50%;
-    margin: 10px auto; /* This centers the input box */
+    margin: 10px auto;  /* Centers the input box */
 }
+
+/* Roll Log List Styling */
 #rollLog li {
-    display: block;  /* This ensures each log entry takes up a full line */
-    margin-bottom: 5px;  /* Optional: adds a little space between each log entry */
+    display: block;  /* Each log entry takes up a full line */
+    margin-bottom: 5px;  /* Adds a little space between each log entry */
 }
+
+/* Logo Styling */
 #websiteLogo {
-
-    width: 70%;  /* Adjust as needed, maybe you'd prefer a max-width */
-    height: auto; /* Keeps the image aspect ratio */
+    width: 70%;  /* Adjust width as needed */
+    height: auto;  /* Keeps the image aspect ratio */
     display: center;
-    margin: 20px 0; /* Adds some space above and below the logo */
+    margin: 20px 0;  /* Adds space above and below the logo */
 }
 
+/* Dropdown Styling */
 select {
     font-family: 'Almendra SC', serif;
 }
 
-
-.wrapper {
-    display: block;  /* This changes the layout from flex to block */
-}
-
+/* Log Container Styling */
 .log {
-    height: 340px;  /* Adjust this value based on your design needs */
-    overflow-y: auto;  /* Allows the log to scroll when there are more entries */
-    max-width: 100%;  /* Allow the log to take the full width */
-    margin-right: 0;  /* Remove the margin that was previously separating it from the container */
-    margin-top: 20px; /* Add some space above the log for separation from the container */
+    height: 340px;
+    overflow-y: auto;  /* Allows scrolling for more entries */
+    max-width: 100%;
+    margin-right: 0;
+    margin-top: 20px;
 }
 
+/* Hamburger Menu Styling */
 .hamburger-menu {
     position: absolute;
     top: 10px;
     left: 10px;
 }
-
 .hamburger-icon {
     font-size: 24px;
     cursor: pointer;
 }
-
 .menu-items {
     display: none;
     background-color: #fff;
     border: 1px solid #ddd;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-
 .menu-items a {
     display: block;
     padding: 10px 20px;
@@ -106,40 +108,40 @@ select {
     color: #333;
     border-bottom: 1px solid #ddd;
 }
-
 .menu-items a:last-child {
     border-bottom: none;
 }
-
 .menu-items a:hover {
     background-color: #f6f6f6;
 }
+
+/* Button Group Styling */
 .button-group {
-    display: flex;           /* Display children in a row */
-    justify-content: space-between; /* Space the buttons equally */
-    gap: 10px;               /* Add a gap between the buttons */
+    display: flex;
+    justify-content: space-between;  /* Space buttons equally */
+    gap: 10px;
 }
 
+/* Histogram Styling */
 #histogramContainer {
     display: flex;
-    align-items: flex-end;  /* This will anchor the bars to the bottom of the container */
+    align-items: flex-end;  /* Anchor bars to the bottom */
     gap: 2px;
-    height: 150px;  /* Adjust as needed */
+    height: 150px;
     border-bottom: 1px solid black;
     margin-top: 20px;
 }
-
 .histogram-bar {
     flex: 1;
     background-color: #007BFF;
     transition: background-color 0.3s;
 }
-
 .histogram-bar:hover {
     background-color: #0056b3;
 }
 
+/* Dice Pool List Styling */
 #dicePoolList {
-    list-style-type: none;
-    padding-left: 0;  /* This will remove the default padding of the unordered list */
+    list-style-type: none;  /* Removes bullet points */
+    padding-left: 0;  /* Removes default padding */
 }
