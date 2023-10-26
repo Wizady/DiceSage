@@ -10,3 +10,5 @@ function toggleMenu() {
         menu.style.display = 'block';
     }
 }
+
+module.exports = toggleMenu;
