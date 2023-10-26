@@ -1,12 +1,6 @@
 // Constants
 const MAX_DISPLAYED_ROLLS = 10;
 
-// Event Listeners
-// document.getElementById('rollWithSidesButton').addEventListener('click', function() {
-//     const selectedSides = parseInt(document.getElementById('diceSides').value);
-//     rollDice(selectedSides);
-// });
-
 document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('rollWithSidesButton').addEventListener('click', function() {
         const selectedSides = parseInt(document.getElementById('diceSides').value);
@@ -24,6 +18,7 @@ function rollDice(sides) {
     const sum = getSum(rolls);
     const logMessage = formatLogMessage(numberOfDice, sides, sum, rolls);
     updateLog(logMessage);
+    saveRollLogToSession();
 }
 
 /**
@@ -86,5 +81,27 @@ function updateLog(message) {
         logList.removeChild(logList.lastChild);
     }
 }
+
+/**
+ * Saves the current roll log to sessionStorage.
+ */
+function saveRollLogToSession() {
+    const rollLogElements = document.getElementById('rollLog').children;
+    const logMessages = Array.from(rollLogElements).map(el => el.textContent);
+    sessionStorage.setItem('rollLog', JSON.stringify(logMessages));
+}
+
+/**
+ * Loads the roll log from sessionStorage and displays it.
+ */
+function loadRollLogFromSession() {
+    const savedRollLog = sessionStorage.getItem('rollLog');
+    if (savedRollLog) {
+        const logMessages = JSON.parse(savedRollLog);
+        logMessages.forEach(message => updateLog(message));
+    }
+}
+
+loadRollLogFromSession();
 
 module.exports = { rollDice, getDiceRolls, getSum, formatLogMessage };

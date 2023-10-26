@@ -49,6 +49,7 @@ function displayDicePool() {
         listItem.textContent = `D${dice.sides} x ${dice.count}`;
         dicePoolList.appendChild(listItem);
     });
+    saveDicePoolToSession();
 }
 
 /**
@@ -113,6 +114,7 @@ function resetDicePool() {
     dicePool.length = 0;
     document.getElementById('dicePoolList').innerHTML = '';
     document.getElementById('averageSum').textContent = `Average Sum: N/A`;
+    sessionStorage.removeItem('dicePool')
 }
 
 /**
@@ -125,6 +127,30 @@ function resetDicePool() {
 function getRandomNumber(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
+
+/**
+ * Saves the current dice pool to sessionStorage.
+ */
+function saveDicePoolToSession() {
+    sessionStorage.setItem('dicePool', JSON.stringify(dicePool));
+}
+
+/**
+ * Loads the dice pool from sessionStorage.
+ */
+function loadDicePoolFromSession() {
+    const savedDicePool = sessionStorage.getItem('dicePool');
+    if (savedDicePool) {
+        dicePool = JSON.parse(savedDicePool);
+    }
+    if (dicePool.length > 0) {
+        calculateAverageSum();
+        simulateRollingDice();
+    }
+}
+
+loadDicePoolFromSession();
+displayDicePool();
 
 module.exports = {
     addDiceToPool,
