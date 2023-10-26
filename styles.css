@@ -32,24 +32,29 @@ input {
     padding: 10px;
     margin: 10px 0;
     border: 1px solid #ccc;
+    background: #FAEBD7;
     border-radius: 4px;
-    font-family: 'MedievalSharp', cursive;
+    font-family: 'Almendra SC', cursive;
 }
 
 /* Buttons */
-button {
-    background-color: #007BFF;
-    color: #fff;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s;
+.button {
+    background: #FAEBD7;
+    border: 1px solid #DEB887;
+    border-radius: 5px;
+    color: #8B4513;
     font-family: 'Almendra SC', serif;
+    padding: 10px 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
 }
-button:hover {
-    background-color: #0056b3;
+
+.button:hover {
+    background: #FFE4B5;
+    transform: translateY(-2px);
 }
+
 
 /* Dice Count Input Styling */
 #diceCount {
@@ -67,13 +72,21 @@ button:hover {
 #websiteLogo {
     width: 70%;  /* Adjust width as needed */
     height: auto;  /* Keeps the image aspect ratio */
-    display: center;
-    margin: 20px 0;  /* Adds space above and below the logo */
+    /* Adds space above and below the logo */
+    margin: 100px 20px 20px;
 }
 
 /* Dropdown Styling */
 select {
     font-family: 'Almendra SC', serif;
+    background: #FAEBD7;
+    border: 1px solid #DEB887;
+    border-radius: 5px;
+    color: #8B4513;
+    padding: 10px 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
 }
 
 /* Log Container Styling */
@@ -97,8 +110,9 @@ select {
 }
 .menu-items {
     display: none;
-    background-color: #fff;
-    border: 1px solid #ddd;
+    border: 1px solid #DEB887;
+    border-radius: 1px;
+    color: #8B4513;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 .menu-items a {
@@ -112,7 +126,8 @@ select {
     border-bottom: none;
 }
 .menu-items a:hover {
-    background-color: #f6f6f6;
+    background: #FFE4B5;
+    transform: translateY(-2px);
 }
 
 /* Button Group Styling */

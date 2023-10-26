@@ -46,38 +46,38 @@
         <!-- Add Dice Buttons -->
         <p>Add dice to your pool:</p>
         <!-- ... Add Dice Buttons ... -->
-        <button onclick="addDiceToPool(4)">Add D4</button>
-        <button onclick="addDiceToPool(6)">Add D6</button>
-        <button onclick="addDiceToPool(8)">Add D8</button>
-        <button onclick="addDiceToPool(10)">Add D10</button>
-        <button onclick="addDiceToPool(12)">Add D12</button>
-        <button onclick="addDiceToPool(20)">Add D20</button>
-        <button onclick="addDiceToPool(100)">Add D100</button>
+        <button class="button" onclick="addDiceToPool(4)">Add D4</button>
+        <button class="button" onclick="addDiceToPool(6)">Add D6</button>
+        <button class="button" onclick="addDiceToPool(8)">Add D8</button>
+        <button class="button" onclick="addDiceToPool(10)">Add D10</button>
+        <button class="button" onclick="addDiceToPool(12)">Add D12</button>
+        <button class="button" onclick="addDiceToPool(20)">Add D20</button>
+        <button class="button" onclick="addDiceToPool(100)">Add D100</button>
         <!-- Remove Dice Buttons -->
         <p>Remove dice from your pool:</p>
         <!-- ... Remove Dice Buttons ... -->
-        <button onclick="removeDiceFromPool(4)">Remove D4</button>
-        <button onclick="removeDiceFromPool(6)">Remove D6</button>
-        <button onclick="removeDiceFromPool(8)">Remove D8</button>
-        <button onclick="removeDiceFromPool(10)">Remove D10</button>
-        <button onclick="removeDiceFromPool(12)">Remove D12</button>
-        <button onclick="removeDiceFromPool(20)">Remove D20</button>
-        <button onclick="removeDiceFromPool(100)">Remove D100</button>
+        <button class="button" onclick="removeDiceFromPool(4)">Remove D4</button>
+        <button class="button" onclick="removeDiceFromPool(6)">Remove D6</button>
+        <button class="button" onclick="removeDiceFromPool(8)">Remove D8</button>
+        <button class="button" onclick="removeDiceFromPool(10)">Remove D10</button>
+        <button class="button" onclick="removeDiceFromPool(12)">Remove D12</button>
+        <button class="button" onclick="removeDiceFromPool(20)">Remove D20</button>
+        <button class="button" onclick="removeDiceFromPool(100)">Remove D100</button>
         <!-- Display Dice Pool -->
         <h2>Your Dice Pool:</h2>
         <ul id="dicePoolList"></ul>
 
         <!-- Calculate and Simulate Buttons -->
         <div class="button-group">
-            <button onclick="calculateAverageSum()">Calculate Average Sum</button>
+            <button class="button" onclick="calculateAverageSum()">Calculate Average Sum</button>
             <p id="averageSum">Average Sum: N/A</p>
-            <button onclick="simulateRollingDice()">Simulate Rolling Dice</button>
+            <button class="button" onclick="simulateRollingDice()">Simulate Rolling Dice</button>
             <p id="simulationResult">Simulation Result: N/A</p>
         </div>
 
         <!-- Reset Dice Pool Button -->
         <br>
-        <button onclick="resetDicePool()">Reset Dice Pool</button>
+        <button class="button" onclick="resetDicePool()">Reset Dice Pool</button>
 
         <!-- Histogram Container -->
         <div id="histogramContainer"></div>
