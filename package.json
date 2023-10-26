@@ -9,6 +9,15 @@
   "jest": {
     "testEnvironment": "jsdom",
     "resetMocks": false,
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "*.js"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "statements": 80
+      }
+    },
     "setupFiles": ["jest-localstorage-mock"]
   },
   "keywords": [],
