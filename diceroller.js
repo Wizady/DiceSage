@@ -2,11 +2,17 @@
 const MAX_DISPLAYED_ROLLS = 10;
 
 // Event Listeners
-document.getElementById('rollWithSidesButton').addEventListener('click', function() {
-    const selectedSides = parseInt(document.getElementById('diceSides').value);
-    rollDice(selectedSides);
-});
+// document.getElementById('rollWithSidesButton').addEventListener('click', function() {
+//     const selectedSides = parseInt(document.getElementById('diceSides').value);
+//     rollDice(selectedSides);
+// });
 
+document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById('rollWithSidesButton').addEventListener('click', function() {
+        const selectedSides = parseInt(document.getElementById('diceSides').value);
+        rollDice(selectedSides);
+    });
+});
 /**
  * Rolls the dice and updates the log.
  *
@@ -80,3 +86,5 @@ function updateLog(message) {
         logList.removeChild(logList.lastChild);
     }
 }
+
+module.exports = { rollDice, getDiceRolls, getSum, formatLogMessage };
