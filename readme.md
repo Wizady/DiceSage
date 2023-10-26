@@ -1,6 +1,8 @@
 
 ![Dice Sage Logo](images/dice_sage_header.png)
 
+[![Run Jest Unit Tests](https://github.com/Wizady/DiceSage/actions/workflows/main.yml/badge.svg)](https://github.com/Wizady/DiceSage/actions/workflows/main.yml)
+
 **Dice Sage** is a specialized dice-rolling application tailored for fantasy tabletop role-playing enthusiasts, especially for Dungeon Masters. It's designed to help Dungeon Masters create better-balanced encounters by simulating multiple dice rolls, giving insights into potential outcomes and assisting in scenario adjustments.
 
 ## Key Features:
