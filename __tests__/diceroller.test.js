@@ -43,4 +43,9 @@ describe('Diceroller Functions', () => {
         expect(logList.children.length).toBe(2); // Because one new entry is added to the log
     });
 
+    test('should save roll log to sessionStorage when dice is rolled', () => {
+        rollDice(6);
+        expect(sessionStorage.setItem).toHaveBeenCalled();
+    });
+
 });

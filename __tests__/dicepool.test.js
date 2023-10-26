@@ -5,7 +5,7 @@ const {
     simulateRollingDice,
     resetDicePool,
     getRandomNumber
-} = require('../dicepool.js'); // replace 'path_to_your_js_file' with the actual path to your JS file
+} = require('../dicepool.js');
 
 
 describe('Dice Pool Functions', () => {
@@ -18,7 +18,20 @@ describe('Dice Pool Functions', () => {
             <div id="simulationResult"></div>
             <div id="histogramContainer"></div>
         `;
+    });
+    afterEach(() => {
         resetDicePool();
+    });
+
+    test('should save dicePool to sessionStorage when dice is added', () => {
+        addDiceToPool(6);
+        expect(sessionStorage.setItem).toHaveBeenCalledWith('dicePool', JSON.stringify([{ sides: 6, count: 1 }]));
+    });
+
+    test('should save dicePool to sessionStorage when dice is removed', () => {
+        addDiceToPool(6);
+        removeDiceFromPool(6);
+        expect(sessionStorage.setItem).toHaveBeenCalledWith('dicePool', JSON.stringify([]));
     });
 
     test('addDiceToPool should add a new dice or increment count', () => {

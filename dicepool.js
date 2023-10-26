@@ -148,9 +148,10 @@ function loadDicePoolFromSession() {
         simulateRollingDice();
     }
 }
-
-loadDicePoolFromSession();
-displayDicePool();
+document.addEventListener('DOMContentLoaded', function() {
+    loadDicePoolFromSession();
+    displayDicePool();
+});
 
 module.exports = {
     addDiceToPool,
