@@ -125,3 +125,12 @@ function resetDicePool() {
 function getRandomNumber(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
+
+module.exports = {
+    addDiceToPool,
+    removeDiceFromPool,
+    calculateAverageSum,
+    simulateRollingDice,
+    resetDicePool,
+    getRandomNumber
+};
